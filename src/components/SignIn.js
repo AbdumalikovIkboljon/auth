@@ -46,16 +46,17 @@ const SignInForm = () => {
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              
             />
-          </div>
-          <div className="flex items-center justify-between">
             <Button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              variant="primary"
+              className="w-full bg-green-600 mt-5"
               type="submit"
             >
               Sign In
             </Button>
-            <div className="inline-block align-baseline">
+          </div>
+            <div className="flex items-center gap-1">
               Don't have any account?
               <Link
                 className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
@@ -64,11 +65,10 @@ const SignInForm = () => {
                 Sign Up
               </Link>
             </div>
-          </div>
         </form>
         <div className="mt-4 text-center">
           <Button
-            className="bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline inline-flex items-center"
+            className="w-full inline-flex justify-center gap-2 bg-gray-800 items-center"
             onClick={handleGitHubSignIn}
           >
             <svg
